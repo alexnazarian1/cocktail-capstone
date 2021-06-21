@@ -8,12 +8,9 @@ const CollectionSchema = new Schema({
         unique: true,
     },
     recipes: {
-        type: Array
+        type: Array,
+        default: []
     },
-    // post: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'Post',
-    // },
 }, {timestamps: true});
 
 const Collection = mongoose.model('Collection', CollectionSchema);
