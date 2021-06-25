@@ -7,12 +7,12 @@ import Col from 'react-bootstrap/Col';
 
 function CollectionList(props) {
     const collectionListItems = props.collections.map((collection, index) => {
-        return <CollectionListGroupItem key={collection.id} collection={collection} />
+        return <CollectionListGroupItem key={collection._id} collection={collection} />
     });
     return (
         <Tab.Container id="collection-tabs" >
             <Row>
-                <Col sm={4}>
+                <Col sm={6}>
                     <ListGroup>
                         { collectionListItems }
                     </ListGroup>

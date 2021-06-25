@@ -2,6 +2,7 @@ import React from 'react';
 
 import Routes from './config/routes';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/App.css';
 
 class App extends React.Component {
