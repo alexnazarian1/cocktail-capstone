@@ -1,16 +1,112 @@
+main {
+    margin: 0;
+}
+
+/* #collection-tabs-tab-null h2 {
+    text-decoration: none;
+} */
+
+/* .accordion {
+    display: block;
+} */
+
+
+
+#recipe-body {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    line-height: 80%;
+}
+
+
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    margin-bottom: 15px;
+}
+
 body {
     margin: 0;
+    background-image: url('../images/home-image-bar.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-weight: 100;
+    
+}
+
+body h1{
+    font-family: 'Poppins', sans-serif;
+    color: white
 }
 
 .home-container {
     height: 100vh;
-    width: 100vw;
-    background: url('https://i.picsum.photos/id/1084/536/354.jpg?grayscale&hmac=Ux7nzg19e1q35mlUVZjhCLxqkR30cC-CarVg-nlIf60');
-    background-size: 150%;
+    width: 100%;
     margin: 0;
+    color: white;
+    display: grid;
+    grid-template-columns: auto 25% auto;
+    grid-template-rows: auto 25% auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home-container #title {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.home-container #title h1 {
+    font-weight: 100;
+    margin-left: 12%;
+}
+
+.home-container #title button {
+    font-weight: 100;
+    background: white;
+    color: black;
+    border-radius: 2px;
+    margin-left: 66%;
+    
 }
 
 img {
     height: 150px;
 }
 
+button {
+    border: 0px;
+    background: black;
+    color: white;
+    border-radius: 3px;
+    margin: 5px 5px 0 0;
+}
+
+#button {
+    border: 0px;
+    background: black;
+    color: white;
+    border-radius: 3px;
+    margin: 5px 5px 0 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+    background: black;
+}
+
+.modal-content {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+}
+
+.modal-content button {
+    border-radius: 3px;
+    margin: 5px 5px 0 0;
+}

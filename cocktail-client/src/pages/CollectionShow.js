@@ -94,21 +94,55 @@ class CollectionShow extends React.Component {
             <section>
                 <h1>{this.state.collection.name}</h1>
                 <EditCollection handleCollectionEdit={this.handleCollectionEdit} collection={this.state.collection}/>
-                <Button className="collection-edit m-1" onClick={this.handleDelete}>Delete</Button>
+                <Button id="button" className="collection-edit m-1 button" onClick={this.handleDelete}>Delete</Button>
                 {this.state.error && <h4>{this.state.error}</h4>}
+                    {/* <Accordion defaultActiveKey="0">
+                        {this.state.collection.recipes && this.state.collection.recipes.map((recipe) => (
+                            <>
+                            <Accordion.Toggle as={Button} variant="link" eventKey={recipe.idDrink}>{recipe.strDrink}</Accordion.Toggle>
+                            <Accordion.Collapse eventKey={recipe.idDrink}>
+                                <Card.Body id="recipe-body">
+                                <div id="recipe-img">
+                                    <img src={recipe.strDrinkThumb}/>
+                                </div>
+                                <div>
+                                    <p>Ingredients:</p>
+                                    <p>{recipe.strMeasure1} {recipe.strIngredient1}</p>
+                                    <p>{recipe.strMeasure2} {recipe.strIngredient2}</p>
+                                    <p>{recipe.strMeasure3} {recipe.strIngredient3}</p>
+                                    <p>{recipe.strMeasure4} {recipe.strIngredient4}</p>
+                                    <p>{recipe.strMeasure5} {recipe.strIngredient5}</p>
+                                </div>
+                                <div>
+                                    <p>Instructions:</p>
+                                    <p>{recipe.strInstructions}</p>
+                                </div>
+                                </Card.Body>
+                            </Accordion.Collapse>
+                            </>
+                        ))}
+                    </Accordion> */}
                     <Accordion defaultActiveKey="0">
                         {this.state.collection.recipes && this.state.collection.recipes.map((recipe) => (
                             <>
                             <Accordion.Toggle as={Button} variant="link" eventKey={recipe.idDrink}>{recipe.strDrink}</Accordion.Toggle>
                             <Accordion.Collapse eventKey={recipe.idDrink}>
-                                <Card.Body>
+                                <Card.Body id="recipe-body">
+                                <div id="recipe-img">
                                     <img src={recipe.strDrinkThumb}/>
+                                </div>
+                                <div>
                                     <p>Ingredients:</p>
-                                    <p>{recipe.strIngredient1}</p>
-                                    <p>{recipe.strIngredient2}</p>
-                                    <p>{recipe.strIngredient3}</p>
+                                    <p>{recipe.strMeasure1} {recipe.strIngredient1}</p>
+                                    <p>{recipe.strMeasure2} {recipe.strIngredient2}</p>
+                                    <p>{recipe.strMeasure3} {recipe.strIngredient3}</p>
+                                    <p>{recipe.strMeasure4} {recipe.strIngredient4}</p>
+                                    <p>{recipe.strMeasure5} {recipe.strIngredient5}</p>
+                                </div>
+                                <div>
                                     <p>Instructions:</p>
                                     <p>{recipe.strInstructions}</p>
+                                </div>
                                 </Card.Body>
                             </Accordion.Collapse>
                             </>

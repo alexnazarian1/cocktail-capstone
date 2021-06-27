@@ -42,9 +42,9 @@ class CreateCollection extends React.Component {
     render() {
         return (
           <>
-            <PlusCircle className="posts-plus" onClick={this.handleShow} />
+            <button className="collection-plus" onClick={this.handleShow}>+</button>
             <Modal show={this.state.show} onHide={this.handleClose}>
-                <Modal.Header closeButton>
+                <Modal.Header>
                     <Modal.Title>Add a collection</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -64,10 +64,10 @@ class CreateCollection extends React.Component {
                         <Row>
                             <Col className="post-actions">
                                 <button className="post-btn custom-btn btn-16 delete" variant="secondary" onClick={this.handleClose}>
-                                    Close
+                                    close
                                 </button>
                                 <button className="post-btn custom-btn btn-16 submit" type="submit" variant="primary">
-                                    Submit
+                                    submit
                                 </button>
                             </Col>
                         </Row>

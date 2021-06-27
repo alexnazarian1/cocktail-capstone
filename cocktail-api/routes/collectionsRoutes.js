@@ -2,6 +2,7 @@ const router = require('express').Router();
 const ctrl = require('../controllers');
 
 router.get('/', ctrl.collections.index);
+router.addDrink('/:id/add', ctrl.collections.addDrink)
 router.get('/:id', ctrl.collections.show);
 router.post('/', ctrl.collections.create);
 router.put('/:id', ctrl.collections.update);

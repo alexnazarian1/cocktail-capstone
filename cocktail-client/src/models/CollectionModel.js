@@ -26,6 +26,11 @@ class CollectionModel {
         const request = axios.delete(`${url}/${collectionId}`);
         return request;
     }
+
+    static addDrink = (collection, recipe) => {
+        const request = axios.put(`${url}/${collection._id}`, collection.recipes)
+        return request;
+    }
 };
 
 export default CollectionModel;

@@ -7,8 +7,10 @@ class Home extends React.Component {
     render() {
         return (
             <div className="home-container">
-                <h1>You're Home!</h1>
-                <Link to='/collections'>Enter</Link>
+                <div id='title'>
+                    <h1>Apperitivo</h1>
+                    <Link to='/collections'><button>Enter</button></Link>
+                </div>
             </div>
         )
     }
