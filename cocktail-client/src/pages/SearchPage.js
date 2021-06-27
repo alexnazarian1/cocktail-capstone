@@ -35,8 +35,6 @@ class SearchPage extends React.Component {
     render() {
         return (
             <div>
-                <NavBar />
-                <h1>This is a search page!</h1>
                 <Form>
                     <Form.Group controlId="search">
                     <Form.Label>Search</Form.Label>

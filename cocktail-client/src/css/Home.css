@@ -1,5 +1,5 @@
-main {
-    margin: 0;
+#root section {
+    margin: 0 auto;
 }
 
 /* #collection-tabs-tab-null h2 {
@@ -10,7 +10,9 @@ main {
     display: block;
 } */
 
-
+nav {
+    margin: 0;
+}
 
 #recipe-body {
     background: rgba(0, 0, 0, 0.5);
@@ -76,8 +78,29 @@ body h1{
     
 }
 
-img {
-    height: 150px;
+/* .card-img-top{
+    width: 25%;
+} */
+
+#recipe-tabs{
+    display: flex;
+    
+}
+
+#recipe-tabs div{
+    box-sizing: border-box;
+}
+.tab-pane {
+    position: fixed;
+    width: 66%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+}
+.recipe-img {
+    height: 350px;
 }
 
 button {

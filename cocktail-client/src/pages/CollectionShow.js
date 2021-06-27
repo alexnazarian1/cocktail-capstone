@@ -1,10 +1,19 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Nav } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
 import Accordion from 'react-bootstrap/Accordion';
 import CollectionModel from '../models/CollectionModel';
 
 import EditCollection from '../components/EditCollection';
+
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
+import TabContainer from 'react-bootstrap/TabContainer';
+import TabContent from 'react-bootstrap/TabContent';
+import TabPane from 'react-bootstrap/TabPane';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 
 
@@ -122,32 +131,48 @@ class CollectionShow extends React.Component {
                             </>
                         ))}
                     </Accordion> */}
-                    <Accordion defaultActiveKey="0">
-                        {this.state.collection.recipes && this.state.collection.recipes.map((recipe) => (
-                            <>
-                            <Accordion.Toggle as={Button} variant="link" eventKey={recipe.idDrink}>{recipe.strDrink}</Accordion.Toggle>
-                            <Accordion.Collapse eventKey={recipe.idDrink}>
-                                <Card.Body id="recipe-body">
-                                <div id="recipe-img">
-                                    <img src={recipe.strDrinkThumb}/>
-                                </div>
-                                <div>
-                                    <p>Ingredients:</p>
-                                    <p>{recipe.strMeasure1} {recipe.strIngredient1}</p>
-                                    <p>{recipe.strMeasure2} {recipe.strIngredient2}</p>
-                                    <p>{recipe.strMeasure3} {recipe.strIngredient3}</p>
-                                    <p>{recipe.strMeasure4} {recipe.strIngredient4}</p>
-                                    <p>{recipe.strMeasure5} {recipe.strIngredient5}</p>
-                                </div>
-                                <div>
-                                    <p>Instructions:</p>
-                                    <p>{recipe.strInstructions}</p>
-                                </div>
-                                </Card.Body>
-                            </Accordion.Collapse>
-                            </>
-                        ))}
-                    </Accordion>
+                    <Tab.Container defaultActiveKey="first" >
+                        <div id="recipe-tabs">
+                            <div>
+                                {this.state.collection.recipes && this.state.collection.recipes.map((recipe) => (
+                                    <>
+                                    <Col sm={3}>
+                                    <Nav variant="pills" className="flex-column">
+                                        <Nav.Item>
+                                            <Nav.Link eventKey={recipe.idDrink}>{recipe.strDrink}</Nav.Link>
+                                        </Nav.Item>
+                                    </Nav>
+                                    </Col>
+                                    </>
+                                ))}
+                            </div>
+                            <div>
+                                {this.state.collection.recipes && this.state.collection.recipes.map((recipe) => (
+                                    <>
+                                    <Col sm={9}>
+                                        <Tab.Content>
+                                            <Tab.Pane eventKey={recipe.idDrink}>
+                                                
+                                                <img className="recipe-img" src={recipe.strDrinkThumb}/>
+                                    
+                                                <p>Ingredients:</p>
+                                                <p>{recipe.strMeasure1} {recipe.strIngredient1}</p>
+                                                <p>{recipe.strMeasure2} {recipe.strIngredient2}</p>
+                                                <p>{recipe.strMeasure3} {recipe.strIngredient3}</p>
+                                                <p>{recipe.strMeasure4} {recipe.strIngredient4}</p>
+                                                <p>{recipe.strMeasure5} {recipe.strIngredient5}</p>
+                                
+                                                <p>Instructions:</p>
+                                                <p>{recipe.strInstructions}</p>
+                                         
+                                            </Tab.Pane>
+                                        </Tab.Content>
+                                    </Col>
+                                    </>
+                                ))}
+                            </div>
+                        </div>
+                    </Tab.Container>
             </section>
         )
     }

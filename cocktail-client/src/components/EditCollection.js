@@ -53,7 +53,7 @@ class EditCollection extends React.Component {
         
         return (
           <>
-            <Button id="button" className="collection-edit" onClick={this.handleShow}>Rename</Button>
+            <Button id="button" className="collection-edit mb-1" onClick={this.handleShow}>Rename</Button>
             <Modal show={this.state.show} onHide={this.handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Rename collection</Modal.Title>
