@@ -28,7 +28,7 @@ class CollectionModel {
     }
 
     static addDrink = (collection, recipe) => {
-        const request = axios.put(`${url}/${collection._id}`, collection.recipes)
+        const request = axios.put(`${url}/${collection}/add`, recipe)
         return request;
     }
 };

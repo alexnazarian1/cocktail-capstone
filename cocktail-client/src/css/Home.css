@@ -1,16 +1,16 @@
-main {
-    margin: 0;
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    margin-bottom: 15px;
 }
 
-/* #collection-tabs-tab-null h2 {
-    text-decoration: none;
-} */
-
-/* .accordion {
-    display: block;
-} */
-
-
+body {
+    background-image: url('../images/home-image-bar.jpeg');
+    background-size: auto 150vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-weight: 100;
+}
 
 #recipe-body {
     background: rgba(0, 0, 0, 0.5);
@@ -18,22 +18,6 @@ main {
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
     line-height: 80%;
-}
-
-
-.navbar {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    margin-bottom: 15px;
-}
-
-body {
-    margin: 0;
-    background-image: url('../images/home-image-bar.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-weight: 100;
-    
 }
 
 body h1{
@@ -76,8 +60,57 @@ body h1{
     
 }
 
-img {
-    height: 150px;
+#nav-link {
+    display: block;
+    width: 200px;
+    padding: .5rem 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+#search-form {
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+}
+
+#search-form button {
+    width: 150px;
+    background: white;
+    color: black;
+}
+
+#card-title .h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200; 
+}
+
+#recipe-tabs{
+    display: flex;
+    
+}
+
+#recipe-tabs div{
+    box-sizing: border-box;
+}
+.tab-pane {
+    position: fixed;
+    width: 66%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: small;
+}
+.recipe-img {
+    height: 300px;
 }
 
 button {
@@ -88,13 +121,30 @@ button {
     margin: 5px 5px 0 0;
 }
 
-#button {
+#collection-add-button{
     border: 0px;
     background: black;
     color: white;
     border-radius: 3px;
     margin: 5px 5px 0 0;
     font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+#collection-card * {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+#button {
+    border: 0px;
+    background: white;
+    color: black;
+    border-radius: 3px;
+    margin: 5px 5px 0 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
 }
 
 .btn {
@@ -103,10 +153,15 @@ button {
 
 .modal-content {
     font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 .modal-content button {
     border-radius: 3px;
     margin: 5px 5px 0 0;
+}
+
+#collection-select-box {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
 }

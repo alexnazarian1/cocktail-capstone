@@ -1,20 +1,22 @@
 import React from 'react';
-
-import Routes from './config/routes';
+import NavBar from './components/NavBar'
+import { Container } from 'react-bootstrap'
+import { withRouter } from 'react-router-dom';
+import routes from './config/routes';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/App.css';
 
-class App extends React.Component {
-  render() {
+function App(props) {
+    const path = props.location.pathname
     return (
-      <>
-        <main className="container">
-          <Routes />
-        </main>
-      </>
+      <React.Fragment>
+        {path !== '/' && <NavBar />}
+      <Container className="pt-5">
+        { routes }
+      </Container>
+      </React.Fragment>
     )
-  }
 }
 
-export default App;
+export default withRouter(App);

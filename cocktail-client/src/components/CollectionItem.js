@@ -1,6 +1,6 @@
 import ListGroup from 'react-bootstrap/ListGroup';
 
-function CommentItem(props) {
+function CollectionItem(props) {
     return (
         <div className="collection-container">
             <ListGroup.Item className="collection">
@@ -12,4 +12,4 @@ function CommentItem(props) {
     )
 }
 
-export default CommentItem;
+export default CollectionItem;
