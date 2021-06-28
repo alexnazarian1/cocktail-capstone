@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './components/NavBar'
+import { Container } from 'react-bootstrap'
 import { withRouter } from 'react-router-dom';
 import routes from './config/routes';
 
@@ -11,7 +12,9 @@ function App(props) {
     return (
       <React.Fragment>
         {path !== '/' && <NavBar />}
+      <Container className="pt-5">
         { routes }
+      </Container>
       </React.Fragment>
     )
 }

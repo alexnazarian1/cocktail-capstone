@@ -55,7 +55,7 @@ const destroy = async (req, res, next) => {
 
 const addDrink = async (req, res, next) => {
     try {
-        const collection = await db.Collection.findById({ _id: req.body.collection});
+        const collection = await db.Collection.findById({ _id: req.params.id});
         if (!collection) return res.json({ message: 'Collection not found in database' });
         // I would console log req.body and verify what data you're sending from react.
         console.log(req.body);

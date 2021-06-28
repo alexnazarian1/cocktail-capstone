@@ -1,17 +1,12 @@
 import React from 'react';
-import { Card, Button, Nav } from 'react-bootstrap';
+import { Container, Button, Nav } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
-import Accordion from 'react-bootstrap/Accordion';
 import CollectionModel from '../models/CollectionModel';
 
 import EditCollection from '../components/EditCollection';
 
-import Tabs from 'react-bootstrap/Tabs';
+
 import Tab from 'react-bootstrap/Tab';
-import TabContainer from 'react-bootstrap/TabContainer';
-import TabContent from 'react-bootstrap/TabContent';
-import TabPane from 'react-bootstrap/TabPane';
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 
@@ -100,37 +95,11 @@ class CollectionShow extends React.Component {
             return <Redirect to="/collections" />
         };
         return (
-            <section>
+            <Container className="mt-3">
                 <h1>{this.state.collection.name}</h1>
                 <EditCollection handleCollectionEdit={this.handleCollectionEdit} collection={this.state.collection}/>
                 <Button id="button" className="collection-edit m-1 button" onClick={this.handleDelete}>Delete</Button>
                 {this.state.error && <h4>{this.state.error}</h4>}
-                    {/* <Accordion defaultActiveKey="0">
-                        {this.state.collection.recipes && this.state.collection.recipes.map((recipe) => (
-                            <>
-                            <Accordion.Toggle as={Button} variant="link" eventKey={recipe.idDrink}>{recipe.strDrink}</Accordion.Toggle>
-                            <Accordion.Collapse eventKey={recipe.idDrink}>
-                                <Card.Body id="recipe-body">
-                                <div id="recipe-img">
-                                    <img src={recipe.strDrinkThumb}/>
-                                </div>
-                                <div>
-                                    <p>Ingredients:</p>
-                                    <p>{recipe.strMeasure1} {recipe.strIngredient1}</p>
-                                    <p>{recipe.strMeasure2} {recipe.strIngredient2}</p>
-                                    <p>{recipe.strMeasure3} {recipe.strIngredient3}</p>
-                                    <p>{recipe.strMeasure4} {recipe.strIngredient4}</p>
-                                    <p>{recipe.strMeasure5} {recipe.strIngredient5}</p>
-                                </div>
-                                <div>
-                                    <p>Instructions:</p>
-                                    <p>{recipe.strInstructions}</p>
-                                </div>
-                                </Card.Body>
-                            </Accordion.Collapse>
-                            </>
-                        ))}
-                    </Accordion> */}
                     <Tab.Container defaultActiveKey="first" >
                         <div id="recipe-tabs">
                             <div>
@@ -139,7 +108,7 @@ class CollectionShow extends React.Component {
                                     <Col sm={3}>
                                     <Nav variant="pills" className="flex-column">
                                         <Nav.Item>
-                                            <Nav.Link eventKey={recipe.idDrink}>{recipe.strDrink}</Nav.Link>
+                                            <Nav.Link id="nav-link" eventKey={recipe.idDrink}>{recipe.strDrink}</Nav.Link>
                                         </Nav.Item>
                                     </Nav>
                                     </Col>
@@ -161,6 +130,10 @@ class CollectionShow extends React.Component {
                                                 <p>{recipe.strMeasure3} {recipe.strIngredient3}</p>
                                                 <p>{recipe.strMeasure4} {recipe.strIngredient4}</p>
                                                 <p>{recipe.strMeasure5} {recipe.strIngredient5}</p>
+                                                <p>{recipe.strMeasure6} {recipe.strIngredient6}</p>
+                                                <p>{recipe.strMeasure7} {recipe.strIngredient7}</p>
+                                                <p>{recipe.strMeasure8} {recipe.strIngredient8}</p>
+                                                <p>{recipe.strMeasure9} {recipe.strIngredient9}</p>
                                 
                                                 <p>Instructions:</p>
                                                 <p>{recipe.strInstructions}</p>
@@ -173,7 +146,7 @@ class CollectionShow extends React.Component {
                             </div>
                         </div>
                     </Tab.Container>
-            </section>
+            </Container>
         )
     }
 

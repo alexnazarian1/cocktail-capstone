@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import { Container } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -41,8 +41,8 @@ class CreateCollection extends React.Component {
 
     render() {
         return (
-          <>
-            <button className="collection-plus" onClick={this.handleShow}>+</button>
+          <Container className="mt-3">
+            <button id="button" className="collection-plus" onClick={this.handleShow}>+ collection</button>
             <Modal show={this.state.show} onHide={this.handleClose}>
                 <Modal.Header>
                     <Modal.Title>Add a collection</Modal.Title>
@@ -74,7 +74,7 @@ class CreateCollection extends React.Component {
                     </Form>
               </Modal.Body>
             </Modal>
-          </>
+          </Container>
         );
     }
   }
