@@ -1,0 +1,11 @@
+body {
+    background-image: url('../images/bar-498420_1920.jpg');
+}
+
+#recipe-body {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    line-height: 80%;
+}

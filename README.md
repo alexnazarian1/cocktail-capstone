@@ -1,9 +1,10 @@
 # Cocktail Capstone Project
 
 ## Technologies Used
-MongoDB, Express, React, Node
+MongoDB, Express, React, Node, Bootstrap
 
 ## Intro
+The intention of this project is to build an application that I as the creator would actually use, and build it in React. I like cocktails. I liked bartending but I didn't like when people would order cocktails by name, it's just hard to remember them all and flipping through those recipe cards was a nightmare. So I built those cards digitally. My initial goals for this app are to be able to look up cocktails by name, and add them to collections. Beyond that, my goals are to implement a tool to search for recipes by the ingredients that a user has on hand, and then refactor pages and components so that all searches and tools and indexes exist on a single page.
 
 ## User Stories
 
@@ -41,3 +42,5 @@ MongoDB, Express, React, Node
             - When a user clicks on a recipe
                 - they can remove the recipe from the collection
                     - modal window confirmation
+
+[Wireframes](https://app.moqups.com/DudhfxfJUX/view/page/a9080d65c)

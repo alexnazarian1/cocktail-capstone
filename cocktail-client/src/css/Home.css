@@ -102,7 +102,7 @@ p {
 .tab-pane {
     position: fixed;
     width: 66%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     padding: 10px;
     color: white;
     font-family: 'Poppins', sans-serif;
